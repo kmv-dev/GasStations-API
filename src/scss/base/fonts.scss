@@ -1,0 +1,48 @@
+// extra-light
+@font-face {
+    font-family: "TitilliumWeb";
+    src: local('TitilliumWeb-ExtraLight'), local('Titillium-Web'), local('TitilliumWeb'),
+    url(./../assets/fonts/Titillium/TitilliumWeb-ExtraLight.ttf);
+    font-weight: 200;
+    font-style: normal;
+}
+// light
+@font-face {
+    font-family: "TitilliumWeb";
+    src: local('TitilliumWeb-Light'), local('Titillium-Web'), local('TitilliumWeb'),
+    url(./../assets/fonts/Titillium/TitilliumWeb-Light.ttf);
+    font-weight: 300;
+    font-style: normal;
+}
+// regular
+@font-face {
+    font-family: "TitilliumWeb";
+    src: local('TitilliumWeb-Regular'), local('Titillium-Web'), local('TitilliumWeb'),
+    url(./../assets/fonts/Titillium/TitilliumWeb-Regular.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+// semi-bold
+@font-face {
+    font-family: "TitilliumWeb";
+    src: local('TitilliumWeb-SemiBold'), local('Titillium-Web'), local('TitilliumWeb'),
+    url(./../assets/fonts/Titillium/TitilliumWeb-SemiBold.ttf);
+    font-weight: 600;
+    font-style: normal;
+}
+// bold
+@font-face {
+    font-family: "TitilliumWeb";
+    src: local('TitilliumWeb-Bold'), local('Titillium-Web'), local('TitilliumWeb'),
+    url(./../assets/fonts/Titillium/TitilliumWeb-Bold.ttf);
+    font-weight: bold;
+    font-style: normal;
+}
+// black
+@font-face {
+    font-family: "TitilliumWeb";
+    src: local('TitilliumWeb-Black'), local('Titillium-Web'), local('TitilliumWeb'),
+    url(./../assets/fonts/Titillium/TitilliumWeb-Black.ttf);
+    font-weight: 900;
+    font-style: normal;
+}
