@@ -1,18 +1,58 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/img/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+    <div v-for="{ sum, station, cars } in stationsWithCars" :key="station.id">
+        <h1>{{ station.name }}</h1>
+        <ul>
+            <li>Заправилось {{ cars.length }} автомобиля</li>
+            <li>На общее количество {{ sum }}л</li>
+        </ul>
+    </div>
+    <h2>Общее количество заправленного топлива = {{ carsSumGas }}л </h2>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
-
+const axios = require('axios');
 export default {
-  name: 'Home',
-  components: {
-    HelloWorld
-  }
+    name: 'Home',
+    data() {
+        return {
+            stations: [],
+            cars: [],
+        }
+    },
+    mounted() {
+        Promise.all([
+            axios.get(`http://localhost:3000/stations`),
+            axios.get(`http://localhost:3000/cars`)
+        ]).then(([stations, cars]) => {
+            this.stations = stations.data;
+            this.cars = cars.data;
+        });
+    },
+    computed: {
+        stationsWithCars() {
+            return this.cars.reduce(
+                (acc, n) => {
+                    const item = acc[n.address];
+                    if (item) {
+                        item.cars.push(n);
+                        item.sum += n.count;
+                    }
+
+                    return acc;
+                },
+                Object.fromEntries(this.stations.map(n => [
+                    n.name,
+                    {
+                        station: n,
+                        cars: [],
+                        sum: 0,
+                    }
+                ]))
+            );
+        },
+        carsSumGas() {
+            return this.cars.reduce((s, i) => s = s + i.count, 0)
+        }
+    },
 }
 </script>
