@@ -1,8 +1,10 @@
 <template>
-    <div v-for="station of stations" :key="station.id">
+    <div v-for="car of cars" :key="car.id">
         <ul>
-            <li>название {{ station.name }}</li>
-            <li>Адрес {{ station.address }}</li>
+            <li>Марка {{ car.name }}</li>
+            <li>Номер {{ car.number }}</li>
+            <li>Сколько заправляет {{ car.count }}</li>
+            <li>Где заправляет {{ car.address }}</li>
         </ul>
     </div>
 </template>
@@ -13,15 +15,13 @@ export default {
     name: 'About',
     data() {
         return {
-            stations: [],
+            cars: [],
         }
     },
     mounted() {
         Promise.all([
-            axios.get(`http://localhost:3000/stations`),
             axios.get(`http://localhost:3000/cars`)
-        ]).then(([stations, cars]) => {
-            this.stations = stations.data;
+        ]).then(([cars]) => {
             this.cars = cars.data;
         });
     },
