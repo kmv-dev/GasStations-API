@@ -5,8 +5,11 @@ body, html {
 }
 
 body {
-    background-color: slateblue;
     font-family: "TitilliumWeb", sans-serif;
     display: flex;
     flex-direction: column;
+}
+
+ul,li {
+    list-style: none;
 }

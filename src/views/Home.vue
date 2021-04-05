@@ -1,16 +1,20 @@
 <template>
-    <div v-for="{ sum, station, cars } in stationsWithCars" :key="station.id">
-        <h1>{{ station.name }}</h1>
-        <ul>
-            <li>Заправилось {{ cars.length }} автомобиля</li>
-            <li>На общее количество {{ sum }}л</li>
-        </ul>
+    <div class="wrap main">
+        <div class="main__item" v-for="{ sum, station, cars } in stationsWithCars" :key="station.id">
+            <h1><i class="fas fa-gas-pump"></i> {{ station.name }}</h1>
+            <ul>
+                <li>Заправилось <span>{{ cars.length }} </span> автомобиля</li>
+                <li>На общее количество <span>{{ sum }}</span> Л</li>
+            </ul>
+        </div>
+        <h2>Общее количество заправленного топлива = {{ carsSumGas }}л </h2>
     </div>
-    <h2>Общее количество заправленного топлива = {{ carsSumGas }}л </h2>
 </template>
 
 <script>
+
 const axios = require('axios');
+
 export default {
     name: 'Home',
     data() {
@@ -35,7 +39,7 @@ export default {
                     const item = acc[n.address];
                     if (item) {
                         item.cars.push(n);
-                        item.sum += n.count;
+                        item.sum += +n.count;
                     }
 
                     return acc;
@@ -51,7 +55,7 @@ export default {
             );
         },
         carsSumGas() {
-            return this.cars.reduce((s, i) => s = s + i.count, 0)
+            return this.cars.reduce((s, i) => s = s + +i.count, 0)
         }
     },
 }

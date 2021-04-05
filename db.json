@@ -1,95 +1,101 @@
 {
-    "stations": [
-        {
-            "id": 1,
-            "name": "Газпром Нефть",
-            "address": "Елизаровых 74"
-        },
-        {
-            "id": 2,
-            "name": "Лукойл",
-            "address": "Нефтяная 54"
-        },
-        {
-            "id": 3,
-            "name": "Газпром Нефть",
-            "address": "Ленина 114"
-        },
-        {
-            "id": 4,
-            "name": "Лукойл",
-            "address": "Жуковского 174"
-        },
-        {
-            "id": 5,
-            "name": "Газпром Нефть",
-            "address": "Мокрушина 2"
-        },
-        {
-            "id": 6,
-            "name": "Газпром Нефть",
-            "address": "Елизаровых 1"
-        },
-        {
-            "id": 7,
-            "name": "Ellki",
-            "address": "Елизаровых 3"
-        },
-        {
-            "id": 8,
-            "name": "Ellki",
-            "address": "Елизаровых 1"
-        }
-    ],
-    "cars": [
-        {
-            "id": 1,
-            "name": "Форд",
-            "number": "р777рр",
-            "count": 25,
-            "address": "Лукойл"
-        },
-        {
-            "id": 2,
-            "name": "Киа",
-            "number": "е123рт",
-            "count": 33,
-            "address": "Газпром Нефть"
-        },
-        {
-            "id": 3,
-            "name": "Мазда",
-            "number": "н444нн",
-            "count": 75,
-            "address": "Лукойл"
-        },
-        {
-            "id": 4,
-            "name": "Лада",
-            "number": "в345кс",
-            "count": 41,
-            "address": "Газпром Нефть"
-        },
-        {
-            "id": 5,
-            "name": "Опель",
-            "number": "х768ее",
-            "count": 10,
-            "address": "Газпром Нефть"
-        },
-        {
-            "id": 6,
-            "name": "Лексус",
-            "number": "о001оо",
-            "count": 46,
-            "address": "Лукойл"
-        },
-        {
-            "id": 6,
-            "name": "Лексус",
-            "number": "о005оо",
-            "count": 46,
-            "address": "Ellki"
-        }
-    ]
+  "stations": [
+    {
+      "name": "Газпром",
+      "address": "Нефтяная 11",
+      "id": 1
+    },
+    {
+      "name": "Лукойл",
+      "address": "Ленина 10",
+      "id": 2
+    },
+    {
+      "name": "Татнефть",
+      "address": "Шегарский тракт 9",
+      "id": 3
+    },
+    {
+      "name": "Газойл",
+      "address": "Яковлева 56",
+      "id": 4
+    },
+    {
+      "name": "Elke Auto",
+      "address": "Нефтяная 10",
+      "id": 5
+    }
+  ],
+  "cars": [
+    {
+      "name": "Audi",
+      "number": "r333ff",
+      "count": "57",
+      "address": "Газпром",
+      "id": 1
+    },
+    {
+      "name": "BMW",
+      "number": "e334ju",
+      "count": "35",
+      "address": "Лукойл",
+      "id": 2
+    },
+    {
+      "name": "Ford",
+      "number": "f777ll",
+      "count": "43",
+      "address": "Татнефть",
+      "id": 3
+    },
+    {
+      "name": "Honda",
+      "number": "h321hd",
+      "count": "77",
+      "address": "Газойл",
+      "id": 4
+    },
+    {
+      "name": "Kia",
+      "number": "m888ks",
+      "count": "87",
+      "address": "Elke Auto",
+      "id": 5
+    },
+    {
+      "name": "Skoda",
+      "number": "a123aa",
+      "count": "65",
+      "address": "Лукойл",
+      "id": 6
+    },
+    {
+      "name": "Nissan",
+      "number": "e333ed",
+      "count": "44",
+      "address": "Газпром",
+      "id": 7
+    },
+    {
+      "name": "Toyota",
+      "number": "g555gg",
+      "count": "33",
+      "address": "Газпром",
+      "id": 8
+    },
+    {
+      "name": "Toyota",
+      "number": "f345dd",
+      "count": "55",
+      "address": "Газпром",
+      "id": 9
+    },
+    {
+      "name": "Audi",
+      "number": "e234ee",
+      "count": "70",
+      "address": "Elke Auto",
+      "id": 10
+    }
+  ]
 }

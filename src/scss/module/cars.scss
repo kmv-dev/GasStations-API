@@ -1,0 +1,40 @@
+.cars {
+    &__item {
+        display: flex;
+        width: 80%;
+        align-items: flex-start;
+        padding: 5px;
+        margin: 5px 20px;
+        background-color: khaki;
+        color: darkorange;
+        border-radius: 10px;
+        cursor: pointer;
+        i {
+            margin-right: 10px;
+            color: #2b82d9;
+        }
+        li {
+            padding: 0 10px;
+            margin-bottom: 5px;
+            color: black;
+        }
+    }
+    &__form {
+        position: absolute;
+        max-width: 200px;
+        display: flex;
+        flex-wrap: wrap;
+        top: 50px;
+        right: 20px;
+        label {
+            margin-bottom: 3px;
+        }
+        input {
+            margin-bottom: 5px;
+        }
+        select {
+            width: 100%;
+            margin-bottom: 5px;
+        }
+    }
+}

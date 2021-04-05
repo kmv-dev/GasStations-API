@@ -1,10 +1,10 @@
 <template>
-    <div id="nav">
-        <router-link class="r-link" to="/">Главная</router-link>
+    <div id="nav" class="head">
+        <router-link class="r-link head__link" to="/">Главная</router-link>
         |
-        <router-link class="r-link" to="/stations">АЗС</router-link>
+        <router-link class="r-link head__link" to="/stations">АЗС</router-link>
         |
-        <router-link class="r-link" to="/cars">Автомобили</router-link>
+        <router-link class="r-link head__link" to="/cars">Автомобили</router-link>
     </div>
     <router-view/>
 </template>

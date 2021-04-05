@@ -1,9 +1,18 @@
 <template>
-    <div v-for="station of stations" :key="station.id">
-        <ul>
-            <li>название {{ station.name }}</li>
-            <li>Адрес {{ station.address }}</li>
-        </ul>
+    <div class="wrap">
+        <div class="stations">
+            <ul v-for="station of stations" :key="station.id" class="stations__item">
+                <li><i class="fas fa-gas-pump"></i>АЗС - {{ station.name }}</li>
+                <li><i class="fas fa-map-marker-alt"></i>Адрес - {{ station.address }}</li>
+            </ul>
+        </div>
+        <form class="stations__form" @submit="addStations">
+            <label>Название</label>
+            <input type="text" v-model="stationName">
+            <label>Адрес</label>
+            <input type="text" v-model="stationAddress">
+            <button type="submit">Добавить АЗС</button>
+        </form>
     </div>
 </template>
 
@@ -14,6 +23,8 @@ export default {
     data() {
         return {
             stations: [],
+            stationName: '',
+            stationAddress: '',
         }
     },
     mounted() {
@@ -23,5 +34,13 @@ export default {
             this.stations = stations.data;
         });
     },
+    methods: {
+        addStations() {
+            axios.post(`http://localhost:3000/stations`, {
+                name: this.stationName,
+                address: this.stationAddress
+            })
+        }
+    }
 }
 </script>
